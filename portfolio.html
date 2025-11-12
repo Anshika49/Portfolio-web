@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Kahaniyan | AI Cinematic Brand Videos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1C1C1C',
+                            gold: '#D4AF37',
+                            cream: '#F4EDE3',
+                            charcoal: '#2A2A2A',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'cinematic': '0 10px 30px -10px rgba(212, 175, 55, 0.15)',
+                        'glow': '0 0 15px rgba(212, 175, 55, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #1C1C1C;
+            color: #F4EDE3;
+            overflow-x: hidden;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1C1C1C; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #D4AF37; 
+        }
+
+        /* Cinematic Fade In */
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Grain Overlay for Film Effect */
+        .film-grain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+            z-index: 50;
+        }
+
+        /* Print Styles for PDF Generation */
+        @media print {
+            body {
+                background-color: #fff !important;
+                color: #000 !important;
+                -webkit-print-color-adjust: exact; 
+                print-color-adjust: exact;
+            }
+            .bg-brand-dark {
+                background-color: #1C1C1C !important;
+                color: #F4EDE3 !important;
+            }
+            .text-brand-gold {
+                color: #D4AF37 !important;
+            }
+            .bg-brand-charcoal {
+                border: 1px solid #ddd;
+                background-color: #f9f9f9 !important;
+                color: #000 !important;
+            }
+            .no-print {
+                display: none !important;
+            }
+            .print-break-inside {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased selection:bg-brand-gold selection:text-brand-dark relative">
+    <!-- Noise Overlay -->
+    <div class="film-grain"></div>
+
+    <!-- Navigation / Actions -->
+    <nav class="fixed top-0 w-full z-40 bg-brand-dark/90 backdrop-blur-md border-b border-brand-gold/20 py-4 no-print">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="text-brand-gold font-serif text-xl font-bold tracking-wider">THINK KAHANIYAN</div>
+            <div class="flex gap-4">
+                <button onclick="window.print()" class="text-xs uppercase tracking-widest border border-brand-gold px-4 py-2 rounded hover:bg-brand-gold hover:text-brand-dark transition duration-300">
+                    <i class="fa-solid fa-file-pdf mr-2"></i>Save as PDF
+                </button>
+                <a href="mailto:thinkkahaniyan@gmail.com" class="bg-brand-gold text-brand-dark text-xs uppercase tracking-widest px-4 py-2 rounded font-bold hover:bg-white transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative pt-32 pb-20 px-6 text-center border-b border-brand-gold/10">
+        <div class="container mx-auto max-w-4xl fade-in-up">
+            <div class="text-brand-gold text-sm uppercase tracking-[0.3em] mb-4">AI Storytelling Studio</div>
+            <h1 class="font-serif text-5xl md:text-7xl mb-6 leading-tight text-brand-cream">
+                THINK <span class="text-brand-gold italic">KAHANIYAN</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-brand-cream/80 font-light max-w-2xl mx-auto leading-relaxed">
+                Where storytelling meets innovation — transforming your brand into emotion.
+            </p>
+            <div class="mt-12 flex justify-center gap-8 text-brand-gold/60 text-2xl">
+                <i class="fa-solid fa-film"></i>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <i class="fa-solid fa-microphone-lines"></i>
+                <i class="fa-solid fa-brain"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Packages Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-center mb-16 fade-in-up delay-100">
+                <div class="h-[1px] w-12 bg-brand-gold"></div>
+                <h2 class="font-serif text-3xl text-brand-gold mx-6 uppercase tracking-widest">Service Packages</h2>
+                <div class="h-[1px] w-12 bg-brand-gold"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                
+                <!-- Pack 1 -->
+                <div class="bg-brand-charcoal border border-brand-gold/30 p-8 rounded-sm hover:border-brand-gold hover:shadow-cinematic transition-all duration-500 relative group print-break-inside fade-in-up delay-200 flex flex-col">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold/30 group-hover:bg-brand-gold transition-all"></div>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-2">Basic Promo Pack</h3>
+                    <div class="text-3xl font-bold text-brand-gold mb-4">₹1,999</div>
+                    <p class="text-sm text-gray-400 mb-6 border-b border-white/10 pb-4">Best for quick promos, awareness clips, & short ads.</p>
+                    
+                    <ul class="space-y-4 text-sm text-brand-cream/90 mb-8 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> 15 – 30 Seconds</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> 1–2 AI-generated scenes</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Theme-based scripting</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Editing + Music + Outro</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> 2 Revisions</li>
+                    </ul>
+                    
+                    <div class="mt-auto pt-6 border-t border-white/10">
+                        <div class="flex justify-between text-xs text-gray-400">
+                            <span><i class="fa-regular fa-clock mr-1"></i> 3-4 Days</span>
+                            <span><i class="fa-solid fa-file-video mr-1"></i> MP4</span>
+                        </div>
+                    </div>
+                </div>
+        <!-- Pack 2 -->
+                <div class="bg-brand-dark border border-brand-gold p-8 rounded-sm shadow-cinematic transform md:-translate-y-4 relative print-break-inside fade-in-up delay-300 flex flex-col">
+                    <div class="absolute top-0 right-0 bg-brand-gold text-brand-dark text-xs font-bold px-3 py-1 uppercase tracking-wide">Most Popular</div>
+                    <h3 class="font-serif text-2xl text-brand-gold mb-2">Cinematic Story</h3>
+                    <div class="text-3xl font-bold text-brand-cream mb-4">₹3,499</div>
+                    <p class="text-sm text-gray-400 mb-6 border-b border-brand-gold/20 pb-4">Emotional brand stories or narrative product ads.</p>
+                    
+                    <ul class="space-y-4 text-sm text-brand-cream/90 mb-8 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> 30 – 60 Seconds</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Concept-based script + structure</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> AI Voiceover</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Multiple AI cinematic visuals</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Tone grading & Transitions</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> 3 Revisions</li>
+                    </ul>
+                    
+                    <div class="mt-auto pt-6 border-t border-brand-gold/20">
+                        <div class="flex justify-between text-xs text-brand-gold/80">
+                            <span><i class="fa-regular fa-clock mr-1"></i> 5-6 Days</span>
+                            <span><i class="fa-solid fa-mobile-screen mr-1"></i> Reel + Short + Sq</span>
+                        </div>
+                    </div>
+                </div>
+        <!-- Pack 3 -->
+                <div class="bg-brand-charcoal border border-brand-gold/30 p-8 rounded-sm hover:border-brand-gold hover:shadow-cinematic transition-all duration-500 relative group print-break-inside fade-in-up delay-200 flex flex-col">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold/30 group-hover:bg-brand-gold transition-all"></div>
+                    <h3 class="font-serif text-2xl text-brand-cream mb-2">Premium Film</h3>
+                    <div class="text-3xl font-bold text-brand-gold mb-4">₹5,499</div>
+                    <p class="text-sm text-gray-400 mb-6 border-b border-white/10 pb-4">Full cinematic storytelling or brand campaign film.</p>
+                    
+                    <ul class="space-y-4 text-sm text-brand-cream/90 mb-8 flex-grow">
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> 60 – 90 Seconds</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Complete Creative Direction</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Multi-scene (POV + B-roll)</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> Voiceover (AI / Human)</li>
+                        <li class="flex items-start"><i class="fa-solid fa-check text-brand-gold mt-1 mr-3"></i> 4 Revisions</li>
+                    </ul>
+                    
+                    <div class="mt-auto pt-6 border-t border-white/10">
+                        <div class="flex justify-between text-xs text-gray-400">
+                            <span><i class="fa-regular fa-clock mr-1"></i> 6-8 Days</span>
+                            <span><i class="fa-solid fa-expand mr-1"></i> All Formats</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons -->
+    <section class="py-12 px-6 bg-black/30">
+        <div class="container mx-auto max-w-4xl">
+            <h3 class="font-serif text-2xl text-brand-cream mb-8 text-center fade-in-up">Custom Add-On Options</h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 fade-in-up delay-100">
+                <!-- Item -->
+                <div class="flex justify-between items-center p-4 border-b border-brand-gold/20 hover:bg-brand-gold/5 transition">
+                    <div class="flex items-center">
+                        <div class="text-brand-gold w-8"><i class="fa-solid fa-microphone"></i></div>
+                        <div>
+                            <div class="text-brand-cream font-medium">Voiceover (AI / Human)</div>
+                            <div class="text-xs text-gray-500">Hindi / English narration</div>
+                        </div>
+                    </div>
+                    <div class="text-brand-gold font-bold">+₹500</div>
+                </div>
+
+                <!-- Item -->
+                <div class="flex justify-between items-center p-4 border-b border-brand-gold/20 hover:bg-brand-gold/5 transition">
+                    <div class="flex items-center">
+                        <div class="text-brand-gold w-8"><i class="fa-solid fa-pen-nib"></i></div>
+                        <div>
+                            <div class="text-brand-cream font-medium">Full Scriptwriting</div>
+                            <div class="text-xs text-gray-500">Detailed creative script</div>
+                        </div>
+                    </div>
+                    <div class="text-brand-gold font-bold">+₹700</div>
+                </div>
+        <!-- Item -->
+                 <div class="flex justify-between items-center p-4 border-b border-brand-gold/20 hover:bg-brand-gold/5 transition">
+                    <div class="flex items-center">
+                        <div class="text-brand-gold w-8"><i class="fa-solid fa-language"></i></div>
+                        <div>
+                            <div class="text-brand-cream font-medium">Multi-Language</div>
+                            <div class="text-xs text-gray-500">Hindi + English / Regional</div>
+                        </div>
+                    </div>
+                    <div class="text-brand-gold font-bold">+₹400</div>
+                </div>
+
+                 <!-- Item -->
+                 <div class="flex justify-between items-center p-4 border-b border-brand-gold/20 hover:bg-brand-gold/5 transition">
+                    <div class="flex items-center">
+                        <div class="text-brand-gold w-8"><i class="fa-solid fa-wand-magic"></i></div>
+                        <div>
+                            <div class="text-brand-cream font-medium">Logo Animation</div>
+                            <div class="text-xs text-gray-500">Custom intro / outro</div>
+                        </div>
+                    </div>
+                    <div class="text-brand-gold font-bold">+₹500</div>
+                </div>
+
+                 <!-- Item -->
+                 <div class="flex justify-between items-center p-4 border-b border-brand-gold/20 hover:bg-brand-gold/5 transition">
+                    <div class="flex items-center">
+                        <div class="text-brand-gold w-8"><i class="fa-solid fa-crop-simple"></i></div>
+                        <div>
+                            <div class="text-brand-cream font-medium">Aspect Ratios</div>
+                            <div class="text-xs text-gray-500">Re-format for all platforms</div>
+                        </div>
+                    </div>
+                    <div class="text-brand-gold font-bold">+₹400</div>
+                </div>
+
+                 <!-- Item -->
+                 <div class="flex justify-between items-center p-4 border-b border-brand-gold/20 hover:bg-brand-gold/5 transition">
+                    <div class="flex items-center">
+                        <div class="text-brand-gold w-8"><i class="fa-solid fa-copyright"></i></div>
+                        <div>
+                            <div class="text-brand-cream font-medium">Exclusive Rights</div>
+                            <div class="text-xs text-gray-500">Ad usage (no reuse)</div>
+                        </div>
+                    </div>
+                    <div class="text-brand-gold font-bold">+₹600</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Pitch Tool -->
+    <section class="py-20 px-6 no-print">
+        <div class="container mx-auto max-w-3xl bg-brand-charcoal border border-brand-gold/10 rounded p-8 fade-in-up delay-200">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="font-serif text-xl text-brand-cream">Client Pitch Template</h3>
+                <button onclick="copyPitch()" id="copyBtn" class="text-brand-gold hover:text-white text-sm flex items-center gap-2 transition">
+                    <i class="fa-regular fa-copy"></i> Copy Text
+                </button>
+            </div>
+            <div class="bg-black/40 p-6 rounded font-mono text-sm text-gray-300 leading-relaxed relative overflow-hidden">
+                <textarea id="pitchText" class="w-full bg-transparent border-none resize-none focus:ring-0 h-48 text-gray-300" readonly>Hi [Client Name] 👋
+I create AI-powered cinematic brand videos that combine storytelling, emotion, and music to help your business stand out.
+Packages start at ₹1,999 for short promos and go up to ₹5,499 for full cinematic films.
+
+Each project includes custom visuals, scripting, editing, and music designed to match your brand’s tone.
+Would you like me to share a concept idea for your business?</textarea>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-brand-gold/10 text-center relative z-10">
+        <div class="container mx-auto fade-in-up delay-300">
+            <h4 class="font-serif text-2xl text-brand-cream mb-2">Think Kahaniyan</h4>
+            <p class="text-brand-gold text-sm uppercase tracking-wider mb-6">Cinematic Ads | Brand Emotion Builders</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6 text-sm text-gray-500 mb-8">
+                <a href="mailto:thinkkahaniyan@gmail.com" class="hover:text-brand-gold transition"><i class="fa-solid fa-envelope mr-2"></i>thinkkahaniyan@gmail.com</a>
+                <a href="#" class="hover:text-brand-gold transition"><i class="fa-brands fa-instagram mr-2"></i>@ThinkKahaniyan</a>
+            </div>
+
+            <div class="w-24 h-[1px] bg-brand-gold/30 mx-auto mb-6"></div>
+            <p class="text-xs text-gray-600">© 2025 Think Kahaniyan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function copyPitch() {
+            const textarea = document.getElementById('pitchText');
+            textarea.select();
+            document.execCommand('copy');
+            
+            const btn = document.getElementById('copyBtn');
+            const originalHTML = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+            btn.classList.add('text-green-400');
+            
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.classList.remove('text-green-400');
+            }, 2000);
+        }
+
+        // Simple animation trigger on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        });
+
+        document.querySelectorAll('.fade-in-up').forEach((el) => {
+            // Reset animation to allow trigger
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
